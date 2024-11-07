@@ -1,0 +1,12 @@
+services:
+  keycloak:
+    container_name: keycloak-sencoin
+    image: quay.io/keycloak/keycloak:24.0.2
+    ports:
+      - 9085:8080
+    environment:
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+
+    command:
+      - "start-dev"
